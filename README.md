@@ -4,7 +4,7 @@ This repository contains projects built with Cursor, Figma, and MCP integration.
 
 ## Projects
 
-- More coming soon!
+- Currently learning how to use cursor! I'll change this once I am building.
 
 ## Getting Started
 
