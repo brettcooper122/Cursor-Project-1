@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/canvas/infinitecanvas.tsx","./src/components/canvas/index.ts","./src/components/ui/addspritemodal.tsx","./src/components/ui/sidedrawer.tsx","./src/components/ui/topnav.tsx","./src/components/ui/index.ts","./src/hooks/index.ts","./src/hooks/usecanvas.ts","./src/types/index.ts"],"version":"5.8.3"}

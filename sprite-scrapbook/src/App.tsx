@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TopNav from './components/ui/TopNav';
 import InfiniteCanvas from './components/canvas/InfiniteCanvas';
 import SideDrawer from './components/ui/SideDrawer';
@@ -6,8 +6,8 @@ import AddSpriteModal from './components/ui/AddSpriteModal';
 import './styles/globals.css';
 
 function App() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDrawerOpen] = useState(false);
+  const [isModalOpen] = useState(false);
 
   return (
     <div className="App">
@@ -21,7 +21,7 @@ function App() {
         <div>Drawer: {isDrawerOpen ? 'Open' : 'Closed'}</div>
         <div>Modal: {isModalOpen ? 'Open' : 'Closed'}</div>
         <div className="text-xs text-gray-300 mt-1">
-          Project structure ready for development
+          Infinite canvas with pan & zoom ready
         </div>
       </div>
     </div>
