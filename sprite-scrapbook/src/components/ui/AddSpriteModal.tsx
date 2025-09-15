@@ -25,9 +25,9 @@ const AddSpriteModal: React.FC<AddSpriteModalProps> = ({
             onClick={onClose}
           />
           
-          {/* Side drawer that slides in from right */}
+          {/* Side drawer - fixed width, slides from right edge */}
           <motion.div 
-            className="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50"
+            className="fixed top-0 right-0 h-screen w-96 bg-white shadow-2xl z-50"
             style={{ marginTop: 'var(--nav-height)' }}
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
