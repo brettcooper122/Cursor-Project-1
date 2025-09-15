@@ -1,6 +1,16 @@
 import React from 'react';
 
-const AddSpriteModal: React.FC = () => {
+interface AddSpriteModalProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+const AddSpriteModal: React.FC<AddSpriteModalProps> = ({ 
+  isOpen = false, 
+  onClose 
+}) => {
+  if (!isOpen) return null;
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-2xl p-6 w-full max-w-md mx-4">
@@ -8,7 +18,10 @@ const AddSpriteModal: React.FC = () => {
           <h2 className="text-2xl font-bold text-primary font-retro">
             Add New Sprite
           </h2>
-          <button className="text-gray-500 hover:text-gray-700 text-2xl">
+          <button 
+            className="text-gray-500 hover:text-gray-700 text-2xl"
+            onClick={onClose}
+          >
             ×
           </button>
         </div>
@@ -80,7 +93,10 @@ const AddSpriteModal: React.FC = () => {
           </div>
           
           <div className="flex space-x-3 pt-4">
-            <button className="flex-1 py-2 px-4 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors">
+            <button 
+              className="flex-1 py-2 px-4 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors"
+              onClick={onClose}
+            >
               Cancel
             </button>
             <button className="flex-1 py-2 px-4 bg-accent text-white rounded-lg hover:bg-accent/80 transition-colors">

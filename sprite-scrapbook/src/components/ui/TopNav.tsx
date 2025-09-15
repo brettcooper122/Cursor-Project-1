@@ -1,6 +1,10 @@
 import React from 'react';
 
-const TopNav: React.FC = () => {
+interface TopNavProps {
+  onAddSpriteClick?: () => void;
+}
+
+const TopNav: React.FC<TopNavProps> = ({ onAddSpriteClick }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg border-b-2 border-accent">
       <div className="flex items-center justify-between px-6 py-4" style={{ height: 'var(--nav-height)' }}>
@@ -11,7 +15,10 @@ const TopNav: React.FC = () => {
         </div>
         
         <div className="flex items-center space-x-4">
-          <button className="px-6 py-2 bg-accent text-white rounded-lg font-medium hover:bg-accent/80 transition-colors">
+          <button 
+            className="px-6 py-2 bg-accent text-white rounded-lg font-medium hover:bg-accent/80 transition-colors"
+            onClick={onAddSpriteClick}
+          >
             Add New Sprite
           </button>
         </div>

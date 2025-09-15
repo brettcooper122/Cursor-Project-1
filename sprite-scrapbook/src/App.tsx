@@ -6,24 +6,33 @@ import AddSpriteModal from './components/ui/AddSpriteModal';
 import './styles/globals.css';
 
 function App() {
-  const [isDrawerOpen] = useState(false);
-  const [isModalOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleAddSpriteClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCloseDrawer = () => {
+    setIsDrawerOpen(false);
+  };
 
   return (
     <div className="App">
-      <TopNav />
+      <TopNav onAddSpriteClick={handleAddSpriteClick} />
       <InfiniteCanvas />
-      <SideDrawer />
-      <AddSpriteModal />
-      
-      {/* Debug info */}
-      <div className="fixed bottom-4 left-4 bg-black bg-opacity-75 text-white p-3 rounded-lg text-sm">
-        <div>Drawer: {isDrawerOpen ? 'Open' : 'Closed'}</div>
-        <div>Modal: {isModalOpen ? 'Open' : 'Closed'}</div>
-        <div className="text-xs text-gray-300 mt-1">
-          Infinite canvas with pan & zoom ready
-        </div>
-      </div>
+      <SideDrawer 
+        isOpen={isDrawerOpen} 
+        onClose={handleCloseDrawer} 
+      />
+      <AddSpriteModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+      />
     </div>
   );
 }
