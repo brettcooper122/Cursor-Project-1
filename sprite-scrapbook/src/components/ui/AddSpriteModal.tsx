@@ -12,28 +12,28 @@ const AddSpriteModal: React.FC<AddSpriteModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-2xl p-6 w-full max-w-md mx-4">
-        <div className="flex items-center justify-between mb-6">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-12">
+      <div className="bg-white rounded-lg shadow-2xl w-full max-w-md mx-auto">
+        <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-2xl font-bold text-primary font-retro">
             Add New Sprite
           </h2>
           <button 
-            className="text-gray-500 hover:text-gray-700 text-2xl"
+            className="text-gray-500 hover:text-gray-700 text-2xl transition-colors"
             onClick={onClose}
           >
             ×
           </button>
         </div>
         
-        <div className="space-y-4">
+        <div className="p-6 space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Name *
             </label>
             <input 
               type="text" 
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors"
               placeholder="Enter sprite name"
             />
           </div>
@@ -44,7 +44,7 @@ const AddSpriteModal: React.FC<AddSpriteModalProps> = ({
             </label>
             <input 
               type="text" 
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors"
               placeholder="e.g., Friend, Family, Colleague"
             />
           </div>
@@ -55,7 +55,7 @@ const AddSpriteModal: React.FC<AddSpriteModalProps> = ({
             </label>
             <input 
               type="number" 
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors"
               placeholder="Enter age"
             />
           </div>
@@ -65,7 +65,7 @@ const AddSpriteModal: React.FC<AddSpriteModalProps> = ({
               Initial Story (optional)
             </label>
             <textarea 
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent h-20 resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent h-20 resize-none transition-colors"
               placeholder="Tell us about this person..."
             />
           </div>
@@ -77,7 +77,7 @@ const AddSpriteModal: React.FC<AddSpriteModalProps> = ({
             <input 
               type="file" 
               accept="image/*"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors"
             />
           </div>
           
@@ -88,7 +88,7 @@ const AddSpriteModal: React.FC<AddSpriteModalProps> = ({
             <input 
               type="file" 
               accept="image/*"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition-colors"
             />
           </div>
           
